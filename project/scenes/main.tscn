@@ -75,6 +75,59 @@ motion_mirroring = Vector2(572, 0)
 texture = ExtResource("4_m32s8")
 centered = false
 
+[node name="HowToPlay" type="MarginContainer" parent="HUD"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -48.0
+offset_top = 41.0
+offset_right = -48.0
+offset_bottom = 41.0
+grow_horizontal = 0
+
+[node name="HowToPlayImage" type="Sprite2D" parent="HUD/HowToPlay"]
+texture_filter = 1
+scale = Vector2(3, 3)
+texture = ExtResource("3_an4qt")
+hframes = 5
+vframes = 6
+frame = 29
+
+[node name="HowToPlayButton" type="Button" parent="HUD/HowToPlay/HowToPlayImage"]
+unique_name_in_owner = true
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -8.0
+offset_top = -8.0
+offset_right = -8.0
+offset_bottom = -8.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("4_qgdep")
+flat = true
+metadata/_edit_use_anchors_ = true
+
+[node name="HowToPlayBackground" type="ColorRect" parent="HUD/HowToPlay/HowToPlayImage/HowToPlayButton"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 0
+offset_left = -156.0
+offset_top = 19.0
+offset_right = 12.0
+offset_bottom = 170.0
+color = Color(0.407843, 0.407843, 0.407843, 0.85098)
+
+[node name="HowToPlayText" type="RichTextLabel" parent="HUD/HowToPlay/HowToPlayImage/HowToPlayButton/HowToPlayBackground"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Place one queen in each row, column, and color region, ensuring no two queens touch, even diagonally."
+
 [node name="HBoxContainer" type="HBoxContainer" parent="HUD"]
 layout_mode = 1
 anchors_preset = 12
@@ -97,7 +150,7 @@ scale = Vector2(3, 3)
 texture = ExtResource("3_an4qt")
 hframes = 5
 vframes = 6
-frame = 21
+frame = 15
 
 [node name="ResetButton" type="Button" parent="HUD/HBoxContainer/Reset/ResetImage"]
 unique_name_in_owner = true
@@ -122,7 +175,7 @@ scale = Vector2(3, 3)
 texture = ExtResource("3_an4qt")
 hframes = 5
 vframes = 6
-frame = 15
+frame = 25
 
 [node name="NewGameButton" type="Button" parent="HUD/HBoxContainer/NewGame/NewGameImage"]
 unique_name_in_owner = true

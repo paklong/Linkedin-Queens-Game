@@ -8,11 +8,17 @@ const LEVEL = preload("res://scenes/level.tscn")
 const ANSWER_CHECKER = preload("res://scenes/answer_checker.tscn")
 const SOLVER = preload("res://scenes/solver.tscn")
 
+
 @onready var check_answer_button: Button = %CheckAnswerButton
 @onready var reset_button: Button = %ResetButton
 @onready var new_game_button: Button = %NewGameButton
 @onready var solver_button: Button = %SolverButton
 @onready var music_button: Button = %MusicButton
+@onready var how_to_play_button: Button = %HowToPlayButton
+@onready var how_to_play_background: ColorRect = %HowToPlayBackground
+
+
+
 
 #5 - 11
 var game_level := 6
@@ -23,6 +29,7 @@ func _ready() -> void:
 	reset_button.pressed.connect(reset_state)
 	new_game_button.pressed.connect(new_gmae)
 	solver_button.pressed.connect(solve)
+	how_to_play_button.pressed.connect(how_to_play)
 	new_gmae()
 	
 	check_answer_button.tooltip_text = 'Check Answer'
@@ -30,6 +37,8 @@ func _ready() -> void:
 	new_game_button.tooltip_text = 'New Level'
 	solver_button.tooltip_text = 'Show Hints'
 	music_button.tooltip_text = 'Toggle Music'
+	how_to_play_button.tooltip_text = 'How To Play'
+	how_to_play_background.z_index = 10
 	
 
 
@@ -81,7 +90,10 @@ func solve():
 	solver.set_up(current_board)
 	var _board = solver.get_solution()
 	current_board = _board
-	
+
+func how_to_play():
+	how_to_play_background.visible = !how_to_play_background.visible
+
 func _on_unsolveable():
 	#print ('Unsolveable, generating new one')
 	new_gmae()

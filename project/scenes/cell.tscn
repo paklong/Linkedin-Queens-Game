@@ -1,0 +1,54 @@
+[gd_scene load_steps=7 format=3 uid="uid://ch26o7msu44on"]
+
+[ext_resource type="Script" path="res://scripts/cell.gd" id="1_5hxsl"]
+[ext_resource type="StyleBox" uid="uid://dit8fb7owbrsc" path="res://resources/border.tres" id="2_03vo0"]
+[ext_resource type="Texture2D" uid="uid://dw8xufjrmkmrs" path="res://assets/images/x_image.png" id="3_k47yl"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_m6wpl"]
+
+[sub_resource type="Theme" id="Theme_dtk0l"]
+Button/styles/focus = SubResource("StyleBoxEmpty_m6wpl")
+
+[sub_resource type="LabelSettings" id="LabelSettings_3odgi"]
+font_size = 10
+outline_size = 3
+outline_color = Color(0, 0, 0, 1)
+
+[node name="Cell" type="Node2D" groups=["cells"]]
+script = ExtResource("1_5hxsl")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+unique_name_in_owner = true
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+color = Color(0.21536, 0.229542, 0.236632, 1)
+
+[node name="Label" type="Label" parent="."]
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+theme_override_styles/normal = ExtResource("2_03vo0")
+
+[node name="Button" type="Button" parent="."]
+unique_name_in_owner = true
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+theme = SubResource("Theme_dtk0l")
+flat = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+texture = ExtResource("3_k47yl")
+
+[node name="DebugLabel" type="Label" parent="."]
+unique_name_in_owner = true
+offset_left = -19.0
+offset_top = -21.0
+offset_right = 19.0
+offset_bottom = -7.0
+label_settings = SubResource("LabelSettings_3odgi")

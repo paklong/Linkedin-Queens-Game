@@ -1,0 +1,227 @@
+[gd_scene load_steps=12 format=3 uid="uid://yr1vm1mcgkjo"]
+
+[ext_resource type="Script" path="res://scripts/main.gd" id="1_8dsan"]
+[ext_resource type="Texture2D" uid="uid://sg5lba1hjbk4" path="res://assets/images/background/stars.png" id="2_0mies"]
+[ext_resource type="Script" path="res://scripts/parallax_background.gd" id="2_dafom"]
+[ext_resource type="PackedScene" uid="uid://cjq8kkj7ytv7y" path="res://scenes/board.tscn" id="2_h7lnv"]
+[ext_resource type="Script" path="res://scripts/background_music.gd" id="2_usqn6"]
+[ext_resource type="Texture2D" uid="uid://b04u8nuqpm6ua" path="res://assets/images/UI_green_buttons_4.png" id="3_an4qt"]
+[ext_resource type="PackedScene" uid="uid://bgtgusi4sta7u" path="res://scenes/level.tscn" id="3_nix4o"]
+[ext_resource type="Texture2D" uid="uid://f2gglj1t1axb" path="res://assets/images/background/nebulae.png" id="3_nvdv8"]
+[ext_resource type="Texture2D" uid="uid://cq5womwgiumt3" path="res://assets/images/background/dust.png" id="4_m32s8"]
+[ext_resource type="Theme" uid="uid://lqysc1rondn" path="res://resources/button_theme.tres" id="4_qgdep"]
+[ext_resource type="Texture2D" uid="uid://ctqb7g3yux3od" path="res://assets/images/background/planets.png" id="5_7rgyx"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_8dsan")
+
+[node name="HUD" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 574.0
+offset_bottom = 728.0
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="HUD"]
+script = ExtResource("2_dafom")
+
+[node name="Dark" type="ParallaxLayer" parent="HUD/ParallaxBackground"]
+texture_filter = 1
+motion_scale = Vector2(0, 0)
+
+[node name="ColorRect" type="ColorRect" parent="HUD/ParallaxBackground/Dark"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 572.0
+offset_bottom = 728.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Nebulae" type="ParallaxLayer" parent="HUD/ParallaxBackground"]
+texture_filter = 1
+motion_scale = Vector2(0.074, 0)
+motion_mirroring = Vector2(572, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="HUD/ParallaxBackground/Nebulae"]
+texture = ExtResource("3_nvdv8")
+centered = false
+
+[node name="Stars" type="ParallaxLayer" parent="HUD/ParallaxBackground"]
+texture_filter = 1
+motion_scale = Vector2(0.222, 0)
+motion_mirroring = Vector2(572, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="HUD/ParallaxBackground/Stars"]
+texture = ExtResource("2_0mies")
+centered = false
+
+[node name="Planets" type="ParallaxLayer" parent="HUD/ParallaxBackground"]
+texture_filter = 1
+motion_scale = Vector2(0.666, 0)
+motion_mirroring = Vector2(572, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="HUD/ParallaxBackground/Planets"]
+texture = ExtResource("5_7rgyx")
+centered = false
+offset = Vector2(0, -150)
+
+[node name="Dust" type="ParallaxLayer" parent="HUD/ParallaxBackground"]
+texture_filter = 1
+motion_scale = Vector2(2, 0)
+motion_mirroring = Vector2(572, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="HUD/ParallaxBackground/Dust"]
+texture = ExtResource("4_m32s8")
+centered = false
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HUD"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -138.0
+offset_bottom = -138.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = 75
+alignment = 1
+
+[node name="Reset" type="MarginContainer" parent="HUD/HBoxContainer"]
+layout_mode = 2
+
+[node name="ResetImage" type="Sprite2D" parent="HUD/HBoxContainer/Reset"]
+texture_filter = 1
+scale = Vector2(3, 3)
+texture = ExtResource("3_an4qt")
+hframes = 5
+vframes = 6
+frame = 21
+
+[node name="ResetButton" type="Button" parent="HUD/HBoxContainer/Reset/ResetImage"]
+unique_name_in_owner = true
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -8.0
+offset_top = -8.0
+offset_right = -8.0
+offset_bottom = -8.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("4_qgdep")
+flat = true
+
+[node name="NewGame" type="MarginContainer" parent="HUD/HBoxContainer"]
+layout_mode = 2
+
+[node name="NewGameImage" type="Sprite2D" parent="HUD/HBoxContainer/NewGame"]
+texture_filter = 1
+scale = Vector2(3, 3)
+texture = ExtResource("3_an4qt")
+hframes = 5
+vframes = 6
+frame = 15
+
+[node name="NewGameButton" type="Button" parent="HUD/HBoxContainer/NewGame/NewGameImage"]
+unique_name_in_owner = true
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -8.0
+offset_top = -8.0
+offset_right = -8.0
+offset_bottom = -8.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("4_qgdep")
+flat = true
+
+[node name="CheckAnswer" type="MarginContainer" parent="HUD/HBoxContainer"]
+layout_mode = 2
+
+[node name="CheckAnswerImage" type="Sprite2D" parent="HUD/HBoxContainer/CheckAnswer"]
+texture_filter = 1
+scale = Vector2(3, 3)
+texture = ExtResource("3_an4qt")
+hframes = 5
+vframes = 6
+frame = 20
+
+[node name="CheckAnswerButton" type="Button" parent="HUD/HBoxContainer/CheckAnswer/CheckAnswerImage"]
+unique_name_in_owner = true
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -8.0
+offset_top = -8.0
+offset_right = -8.0
+offset_bottom = -8.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("4_qgdep")
+flat = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Solve" type="MarginContainer" parent="HUD/HBoxContainer"]
+visible = false
+layout_mode = 2
+
+[node name="SolverImage" type="Sprite2D" parent="HUD/HBoxContainer/Solve"]
+texture_filter = 1
+scale = Vector2(3, 3)
+texture = ExtResource("3_an4qt")
+hframes = 5
+vframes = 6
+frame = 9
+
+[node name="SolverButton" type="Button" parent="HUD/HBoxContainer/Solve/SolverImage"]
+unique_name_in_owner = true
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -8.0
+offset_top = -8.0
+offset_right = -8.0
+offset_bottom = -8.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("4_qgdep")
+flat = true
+metadata/_edit_use_anchors_ = true
+
+[node name="BackgroundMusic" type="MarginContainer" parent="HUD/HBoxContainer"]
+layout_mode = 2
+script = ExtResource("2_usqn6")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="HUD/HBoxContainer/BackgroundMusic"]
+unique_name_in_owner = true
+
+[node name="MusicImage" type="Sprite2D" parent="HUD/HBoxContainer/BackgroundMusic"]
+unique_name_in_owner = true
+texture_filter = 1
+scale = Vector2(3, 3)
+texture = ExtResource("3_an4qt")
+hframes = 5
+vframes = 6
+frame = 11
+
+[node name="MusicButton" type="Button" parent="HUD/HBoxContainer/BackgroundMusic/MusicImage"]
+unique_name_in_owner = true
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -8.0
+offset_top = -8.0
+offset_right = -8.0
+offset_bottom = -8.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("4_qgdep")
+flat = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Board" parent="." instance=ExtResource("2_h7lnv")]
+
+[node name="Level" parent="." instance=ExtResource("3_nix4o")]

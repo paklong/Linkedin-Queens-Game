@@ -1,7 +1,7 @@
 name: "Publish to GitHub Pages"
 
 env:
-  GODOT_VERSION: 4.3.rc1
+  GODOT_VERSION: 4.2.2
 
 on:
   workflow_dispatch:
@@ -46,4 +46,4 @@ jobs:
           force_orphan: true
           user_name: "github-ci[bot]"
           user_email: "github-actions[bot]@users.noreply.github.com"
-          commit_message: "Publish to gh-pages 4.3.rc1"
+          commit_message: "Publish to gh-pages 4.2.2"

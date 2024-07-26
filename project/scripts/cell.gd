@@ -108,4 +108,3 @@ func reset():
 	is_queen = false 
 	can_queen = true
 	color_rect.color = Color.WHITE
-

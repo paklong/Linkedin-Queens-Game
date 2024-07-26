@@ -142,5 +142,3 @@ func generate_level(board):
 			#unsolveable.emit()
 
 			#finished_generated()
-
-

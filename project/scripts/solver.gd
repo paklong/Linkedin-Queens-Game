@@ -155,14 +155,3 @@ func two_cells_v_rule() -> bool:
 					if same_col_cell.color_name != color_group[0].color_name:
 						apply_x(same_col_cell)
 	return false
-
-
-
-
-
-
-
-
-
-
-

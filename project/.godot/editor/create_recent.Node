@@ -1,0 +1,14 @@
+ColorRect
+RichTextLabel
+Label
+Sprite2D
+ParallaxBackground
+ParallaxLayer
+TextureRect
+HBoxContainer
+MarginContainer
+GridContainer
+Control
+Button
+TileMap
+LightOccluder2D

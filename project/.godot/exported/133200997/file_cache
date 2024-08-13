@@ -1,0 +1,8 @@
+res://resources/border.tres::5232ac9d3150f70dfd6e8d2cd5c7327e::1721971491::res://.godot/exported/133200997/export-3ab4969de0a4677d3f05a84d05967d01-border.res
+res://resources/button_theme.tres::f0faf1e64e0434cbeab3b461c292eddc::1721227210::res://.godot/exported/133200997/export-932bfd564718d7e3011e047f7c41f505-button_theme.res
+res://scenes/answer_checker.tscn::e94006f49d9268914c3400b9ce27c362::1721918987::res://.godot/exported/133200997/export-f27b69d973a3936d18b4894b7ecbf382-answer_checker.scn
+res://scenes/board.tscn::fe64c5495ec63f07a15da481693508a5::1721450506::res://.godot/exported/133200997/export-7af1610c67933587f82174b6bfa726df-board.scn
+res://scenes/cell.tscn::d8e2badc2df1a45ec641501d2a3b5d1a::1721918987::res://.godot/exported/133200997/export-6b46d77fead1f10c2a069a44d690af09-cell.scn
+res://scenes/level.tscn::20649bc6c7eabb6eadcc09a4e52221c6::1721918987::res://.godot/exported/133200997/export-a0631f9feb269b9ee464fe0e4794e617-level.scn
+res://scenes/main.tscn::14327189ea95878f233e748a0c3f1645::1721971491::res://.godot/exported/133200997/export-3ad5c15c4f3250da0cc7c1af1770d85f-main.scn
+res://scenes/solver.tscn::fc8d49c201bd15beb1ae417054ef6d09::1721660003::res://.godot/exported/133200997/export-939bc414b152010b38ed01269b27e0d1-solver.scn

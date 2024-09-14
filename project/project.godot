@@ -13,7 +13,8 @@ config_version=5
 config/name="Queens"
 run/main_scene="res://scenes/main.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
-boot_splash/show_image=false
+boot_splash/image="res://assets/images/crown_image.png"
+boot_splash/fullsize=false
 config/icon="res://assets/images/crown_image.png"
 
 [display]

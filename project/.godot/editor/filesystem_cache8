@@ -1,9 +1,10 @@
 fc8a56933c4b1c8d796fdb8f7a9f9475
-::res://::1726341649
+::res://::1726342913
 credit.md::TextFile::-1::1721513558::0::1::::<><>::
 export_presets.cfg::TextFile::-1::1726340278::0::1::::<><>::
 icon.svg::CompressedTexture2D::217752374523448909::1721916858::1721452268::1::::<><>::
 issue.md::TextFile::-1::1721971491::0::1::::<><>::
+Subject.png::CompressedTexture2D::8702527651502576405::1726342913::1726342913::1::::<><>::
 ::res://addons/::1721397269
 ::res://addons/godot-git-plugin/::1721397154
 git_plugin.gdextension::GDExtension::-1::1712608203::0::1::::<><>::
@@ -11,7 +12,7 @@ plugin.cfg::TextFile::-1::1712608203::0::1::::<><>::
 THIRDPARTY.md::TextFile::-1::1712608203::0::1::::<><>::
 ::res://addons/godot-git-plugin/linux/::1721397153
 ::res://addons/godot-git-plugin/macos/::1721397154
-::res://addons/godot-git-plugin/win64/::1726341642
+::res://addons/godot-git-plugin/win64/::1726342605
 ::res://assets/::1721834830
 ::res://assets/fonts/::1721834850
 Early GameBoy.ttf::FontFile::1997501158195317197::1721834849::1721834850::1::::<><>::
@@ -34,15 +35,15 @@ Stream Loops 2024-02-28_02.ogg::AudioStreamOggVorbis::1342112071989370801::17212
 Stream Loops 2024-04-24_02.ogg::AudioStreamOggVorbis::7099728057172329776::1721223379::1721223578::1::::<><>::
 Stream Loops 2024-04-24_03.ogg::AudioStreamOggVorbis::4942781130076979237::1721223364::1721223578::1::::<><>::
 The Verdant Grove.ogg::AudioStreamOggVorbis::5738910282019925290::1721223516::1721223578::1::::<><>::
-::res://resources/::1726341242
-border.tres::StyleBoxFlat::7762008669864162130::1726341242::0::1::::<><>::
+::res://resources/::1726341876
+border.tres::StyleBoxFlat::7762008669864162130::1726341876::0::1::::<><>::
 button_theme.tres::Theme::23723435947154023::1721227210::0::1::::<><>::
-::res://scenes/::1726341257
-answer_checker.tscn::PackedScene::7228005273193824613::1721918987::0::1::::<><>::res://scripts/answer_checker.gd<>uid://3pus1neb68s4::::res://assets/fonts/Early GameBoy.ttf
+::res://scenes/::1726341909
+answer_checker.tscn::PackedScene::7228005273193824613::1726341888::0::1::::<><>::res://scripts/answer_checker.gd<>uid://3pus1neb68s4::::res://assets/fonts/Early GameBoy.ttf
 board.tscn::PackedScene::5439593063517311236::1721450506::0::1::::<><>::res://scripts/board.gd
-cell.tscn::PackedScene::5321810400233067461::1721918987::0::1::::<><>::res://scripts/cell.gd<>uid://dit8fb7owbrsc::::res://resources/border.tres<>uid://dw8xufjrmkmrs::::res://assets/images/x_image.png
-level.tscn::PackedScene::2847177899804294956::1726341257::0::1::::<><>::res://scripts/level.gd
-main.tscn::PackedScene::1721243483608986296::1721971491::0::1::::<><>::res://scripts/main.gd<>uid://sg5lba1hjbk4::::res://assets/images/background/stars.png<>res://scripts/parallax_background.gd<>uid://cjq8kkj7ytv7y::::res://scenes/board.tscn<>res://scripts/background_music.gd<>uid://b04u8nuqpm6ua::::res://assets/images/UI_green_buttons_4.png<>uid://bgtgusi4sta7u::::res://scenes/level.tscn<>uid://f2gglj1t1axb::::res://assets/images/background/nebulae.png<>uid://cq5womwgiumt3::::res://assets/images/background/dust.png<>uid://lqysc1rondn::::res://resources/button_theme.tres<>uid://ctqb7g3yux3od::::res://assets/images/background/planets.png
+cell.tscn::PackedScene::5321810400233067461::1726341888::0::1::::<><>::res://scripts/cell.gd<>uid://dit8fb7owbrsc::::res://resources/border.tres<>uid://dw8xufjrmkmrs::::res://assets/images/x_image.png
+level.tscn::PackedScene::2847177899804294956::1726341909::0::1::::<><>::res://scripts/level.gd
+main.tscn::PackedScene::1721243483608986296::1726341888::0::1::::<><>::res://scripts/main.gd<>uid://sg5lba1hjbk4::::res://assets/images/background/stars.png<>res://scripts/parallax_background.gd<>uid://cjq8kkj7ytv7y::::res://scenes/board.tscn<>res://scripts/background_music.gd<>uid://b04u8nuqpm6ua::::res://assets/images/UI_green_buttons_4.png<>uid://bgtgusi4sta7u::::res://scenes/level.tscn<>uid://f2gglj1t1axb::::res://assets/images/background/nebulae.png<>uid://cq5womwgiumt3::::res://assets/images/background/dust.png<>uid://lqysc1rondn::::res://resources/button_theme.tres<>uid://ctqb7g3yux3od::::res://assets/images/background/planets.png
 solver.tscn::PackedScene::7593370619203299950::1721660003::0::1::::<><>::res://scripts/solver.gd
 ::res://scripts/::1726341242
 answer_checker.gd::GDScript::-1::1721835306::0::1::::AnswerChecker<>Node2D<>::

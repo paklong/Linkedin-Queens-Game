@@ -65,8 +65,3 @@ func toggle_music():
 		music_image.frame = 11
 	else:
 		music_image.frame = 12
-
-
-
-
-

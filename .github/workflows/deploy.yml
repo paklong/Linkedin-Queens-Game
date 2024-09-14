@@ -1,7 +1,7 @@
 name: "Publish to GitHub Pages"
 
 env:
-  GODOT_VERSION: 4.2.2
+  GODOT_VERSION: 4.3
 
 on:
   workflow_dispatch:
@@ -16,7 +16,7 @@ jobs:
       contents: write
 
     container:
-      image: barichello/godot-ci:4.2.2
+      image: barichello/godot-ci:4.3
 
     steps:
       - name: Checkout
@@ -39,11 +39,11 @@ jobs:
           sed -i '3 i <script src="coi-serviceworker.js"></script>' build/web/index.html
 
       - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3.9.3
+        uses: peaceiris/actions-gh-pages@v4.0.0
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./build/web
           force_orphan: true
           user_name: "github-ci[bot]"
           user_email: "github-actions[bot]@users.noreply.github.com"
-          commit_message: "Publish to gh-pages 4.2.2"
+          commit_message: "Publish to gh-pages 4.3
